@@ -97,10 +97,10 @@ class UIElementsManager {
         return button
     }
     
-    static func createImageView(with imageName: String) -> UIImageView {
+    static func createImageView(with image: UIImage) -> UIImageView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: imageName)
+        imageView.image = image
         imageView.contentMode = .scaleAspectFit
         
         return imageView

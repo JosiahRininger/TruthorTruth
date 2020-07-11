@@ -1,14 +1,14 @@
 //
-//  HomeController.swift
+//  CategoryDetailController.swift
 //  Truth or Truth
 //
-//  Created by Josiah Rininger on 6/21/20.
+//  Created by Josiah Rininger on 7/11/20.
 //  Copyright © 2020 Josiah Rininger. All rights reserved.
 //
 
 import UIKit
 
-final class HomeController: UIViewController {
+final class CategoryDetailController: UIViewController, UICollectionViewDelegate {
     
     let homeView = HomeView()
 

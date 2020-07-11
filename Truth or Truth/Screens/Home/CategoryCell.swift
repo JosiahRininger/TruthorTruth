@@ -13,6 +13,7 @@ class CategoryCell: UICollectionViewCell {
     let card = Card()
     let subCard = Card(isSubCard: true)
     
+    var imageView = UIElementsManager.createImageView(with: UIImage())
     let titleLabel = UIElementsManager.createLabel(with: "Friends", fontSize: 30, textAlignment: .center)
     let subTitleLabel = UIElementsManager.createLabel(with: "Play these cards if you’re playing with peeps you already know", fontSize: 24, numberOfLines: 3, textAlignment: .center)
     
@@ -31,7 +32,7 @@ class CategoryCell: UICollectionViewCell {
         backgroundColor = .background
         layer.cornerRadius = 9
         
-        addSubviews(subCard, card, titleLabel, subTitleLabel)
+        addSubviews(subCard, card, imageView, titleLabel, subTitleLabel)
         setupConstraints()
     }
     
@@ -43,8 +44,13 @@ class CategoryCell: UICollectionViewCell {
             subCard.centerXAnchor.constraint(equalTo: card.centerXAnchor),
             subCard.centerYAnchor.constraint(equalTo: card.bottomAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: card.topAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: card.centerYAnchor),
+            imageView.topAnchor.constraint(equalTo: card.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: card.centerYAnchor),
+            imageView.leadingAnchor.constraint(equalTo: card.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: card.trailingAnchor),
+            
+            titleLabel.centerYAnchor.constraint(equalTo: card.centerYAnchor),
+            titleLabel.heightAnchor.constraint(equalToConstant: 30),
             titleLabel.leadingAnchor.constraint(equalTo: card.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: card.trailingAnchor),
             
@@ -55,9 +61,10 @@ class CategoryCell: UICollectionViewCell {
             ])
     }
     
-    func configure(title: String, subTitle: String) {
+    func configure(title: String, subTitle: String, image: UIImage) {
         titleLabel.text = title
         subTitleLabel.text = subTitle
+        imageView.image = image
     }
     
 }
