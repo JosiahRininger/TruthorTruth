@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeController: UIViewController {
+final class HomeController: TOTViewController {
     
     let homeView = HomeView()
 
@@ -17,14 +17,8 @@ final class HomeController: UIViewController {
         homeView.cardCollectionView.delegate = self
         homeView.cardCollectionView.dataSource = self
         
-        setupView()
+        setup(with: homeView)
     }
-    
-    private func setupView() {
-        view = homeView
-    }
-
-
 }
 
 // MARK: - UICollectionView Methods
@@ -43,6 +37,13 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
             image: UIImage.categoryImages[indexPath.row] ?? UIImage()
         )
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let questionsType = QuestionsType.init(rawValue: String.Literals.categories[indexPath.row]) else {
+            return
+        }
+        navigationController?.pushViewController(CategoryDetailController(questionsType: questionsType), animated: true)
     }
 }
 

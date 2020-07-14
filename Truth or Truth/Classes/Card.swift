@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Card: UIView {
+final class Card: UIView {
     
     var height: CGFloat = 0
     var width: CGFloat = 0

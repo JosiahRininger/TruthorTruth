@@ -40,48 +40,8 @@ extension UIColor {
     static var card: UIColor = {
         return UIColor(named: "card") ?? .hexToColor(hexString: "#F4F4F4")
     }()
-
     
-    static let secondaryBackgroundColor: UIColor = {
-        if #available(iOS 13.0, *) {
-            return UIColor(named: "SecondaryBackground") ?? .white
-        } else {
-            return .white
-        }
+    static var imageTint: UIColor = {
+        return UIColor(named: "imageTint") ?? .hexToColor(hexString: "#F4F4F4")
     }()
-    static let mainText: UIColor = {
-        if #available(iOS 13.0, *) {
-            return UIColor(named: "MainText") ?? .black
-        } else {
-            return .black
-        }
-    }()
-
-    static let subText: UIColor = {
-        if #available(iOS 13.0, *) {
-            return UIColor(named: "SubText") ?? .hexToColor(hexString: "#585858")
-        } else {
-            return .hexToColor(hexString: "#585858")
-        }
-    }()
-    
-    static let cellBackground: UIColor = {
-        if #available(iOS 13.0, *) {
-            return UIColor(named: "CellBackground") ?? .hexToColor(hexString: "#EEEEEE")
-        } else {
-            return .hexToColor(hexString: "#EEEEEE")
-        }
-    }()
-    
-    static let secondaryGray: UIColor = .hexToColor(hexString: "#707070")
-    static let packOneColor: UIColor = .hexToColor(hexString: "#9533C7")
-    static let packTwoColor: UIColor = .hexToColor(hexString: "#00A0EF")
-    static let specialPackColor: UIColor = .hexToColor(hexString: "#2FD566")
-    
-    // Secondary Color Options
-    static let customPurple: UIColor = .hexToColor(hexString: "#9533C7")
-    static let customBlue: UIColor = .hexToColor(hexString: "#00A0EF")
-    static let customGreen: UIColor = .hexToColor(hexString: "#2FD566")
-    static let customOrange: UIColor = .hexToColor(hexString: "#FF5800")
-    static let customRed: UIColor = .hexToColor(hexString: "#E3212F")
 }

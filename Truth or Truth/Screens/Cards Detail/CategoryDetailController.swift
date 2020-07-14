@@ -7,47 +7,85 @@
 //
 
 import UIKit
+import Koloda
 
-final class CategoryDetailController: UIViewController, UICollectionViewDelegate {
+final class CategoryDetailController: TOTViewController {
     
-    let homeView = HomeView()
-
+    let categoryDetailView = CategoryDetailView()
+    var questionModels = [QuestionModel]()
+    var categoryViewModel: CategoryViewModel?
+    var questionsType: QuestionsType?
+    
+    init(questionsType: QuestionsType) {
+        self.questionsType = questionsType
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+// MARK: - View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeView.cardCollectionView.delegate = self
-        homeView.cardCollectionView.dataSource = self
+        categoryDetailView.kolodaView.delegate = self
+        categoryDetailView.kolodaView.dataSource = self
+        categoryViewModel = CategoryViewModel(delegate: self)
         
-        setupView()
+        fetchQuestions(for: questionsType)
+        
+        setup(with: categoryDetailView)
+        
+        setupNavigationItem()
     }
     
-    private func setupView() {
-        view = homeView
+    func setupNavigationItem(){
+        navigationItem.title = questionsType?.rawValue ?? ""
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: .back, style:.plain, target: self, action: #selector(goBack))
+        navigationItem.leftBarButtonItem?.imageInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: .send, style:.plain, target: self, action: #selector(goBack))
     }
 
-
-}
-
-// MARK: - UICollectionView Methods
-extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return String.Literals.categories.count
+// MARK: - Helper Methods
+    private func fetchQuestions(for questionsType: QuestionsType?) {
+        guard let questionsType = questionsType else { return }
+        categoryViewModel?.fetchQuestions(for: questionsType)
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String.IDs.categoryCellId, for: indexPath) as? CategoryCell else {
-            return UICollectionViewCell()
-        }
-        cell.configure(
-            title: String.Literals.categories[indexPath.row],
-            subTitle: String.Literals.categoryDescriptions[indexPath.row],
-            image: UIImage.categoryImages[indexPath.row] ?? UIImage()
-        )
-        return cell
+    @objc func goBack() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
-extension HomeController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIElementsManager.collectionViewCellWidth, height: UIElementsManager.collectionViewCellHeight)
+// MARK: - CategoryViewModel Methods
+extension CategoryDetailController: CategoryViewModelDelegate {
+    func questionsRetrieved(_ questionModels: [QuestionModel]) {
+        self.questionModels = questionModels
+        
+        categoryDetailView.kolodaView.reloadData()
     }
 }
+
+// MARK: - KolodaView Methods
+extension CategoryDetailController: KolodaViewDelegate, KolodaViewDataSource {
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        print("Selected Card")
+    }
+    
+    func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
+        return questionModels.count
+    }
+    
+    func kolodaShouldMoveBackgroundCard(_ koloda: KolodaView) -> Bool {
+        return false
+    }
+    
+    func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool {
+        return false
+    }
+
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
+        return UIElementsManager.createKolodaCard(with: questionModels[index].text)
+    }
+}
+

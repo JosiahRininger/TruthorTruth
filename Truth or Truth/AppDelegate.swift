@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,15 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        let navigationController = UINavigationController(rootViewController: HomeController())
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = .background
-        navigationBarAppearace.barTintColor = .background
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController.navigationBar.shadowImage = UIImage()
-        navigationController.navigationBar.isTranslucent = true
+        let navigationController = TOTNavigationController(rootViewController: HomeController())
         
         self.window?.rootViewController = navigationController
+        self.window?.overrideUserInterfaceStyle = .light
+        
+        FirebaseApp.configure()
         
         return true
     }

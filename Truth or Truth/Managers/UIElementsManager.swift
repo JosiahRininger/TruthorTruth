@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Koloda
 
-class UIElementsManager {
+struct UIElementsManager {
     
     static var windowWidth: CGFloat = UIScreen.main.bounds.width
     static var windowHeight: CGFloat = UIScreen.main.bounds.height
@@ -22,19 +23,15 @@ class UIElementsManager {
     
     static var collectionViewCellWidth: CGFloat = cardWidth + 15
     static var collectionViewCellHeight: CGFloat = cardHeight + subCardHeight + 15
-//
+
     static var buttonWidth: CGFloat = 144
     static var buttonHeight: CGFloat = 61
-//
-//    static var textFieldHeight: CGFloat = 50\
-//    static var circleViewHeightAndWidth: CGFloat = 22
+
+    static var circleViewHeightAndWidth: CGFloat = 50
 //    static var settingsButtonHeightAndWidth: CGFloat = 30
-//    static var iconHeightAndWidth: CGFloat = 40
-//
     static var padding: CGFloat = 44
-//    static var buttonPadding: CGFloat = 60
     
-    static func createLabel(with title: String, fontSize: CGFloat, numberOfLines: Int = 1, color: UIColor = .mainText, textAlignment: NSTextAlignment = .natural, isHeader: Bool = false) -> UILabel {
+    static func createLabel(with title: String, fontSize: CGFloat, numberOfLines: Int = 1, color: UIColor = .label, textAlignment: NSTextAlignment = .natural, isHeader: Bool = false) -> UILabel {
         let label = UILabel()
         label.text = title
         label.textColor = color
@@ -47,46 +44,10 @@ class UIElementsManager {
         return label
     }
     
-//    static func createTextField(with placeholder: String) -> UITextField {
-//        let t = UITextField()
-//        t.backgroundColor = .secondaryBackgroundColor
-//        t.textColor = .mainText
-//        t.placeholder = placeholder
-//        t.tintColor = .secondaryColor
-//        t.leftView =  UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textFieldHeight))
-//        t.leftViewMode = .always
-//        t.layer.borderWidth = 1
-//        t.layer.cornerRadius = 9
-//        t.layer.borderColor = UIColor.secondaryGray.cgColor
-//        t.autocorrectionType = UITextAutocorrectionType.no
-//        t.translatesAutoresizingMaskIntoConstraints = false
-//        t.heightAnchor.constraint(equalToConstant: textFieldHeight).isActive = true
-//
-//        return t
-//    }
-    
-//    static func createNumberTextField() -> UITextField {
-//        let t = UITextField()
-//        t.backgroundColor = .secondaryBackgroundColor
-//        t.textColor = .mainText
-//        t.textAlignment = .center
-//        t.tintColor = .secondaryColor
-//        t.keyboardType = .numberPad
-//        t.layer.borderWidth = 1
-//        t.layer.cornerRadius = 9
-//        t.layer.borderColor = UIColor.secondaryGray.cgColor
-//        t.autocorrectionType = UITextAutocorrectionType.no
-//        t.translatesAutoresizingMaskIntoConstraints = false
-//        t.heightAnchor.constraint(equalToConstant: textFieldHeight).isActive = true
-//        t.widthAnchor.constraint(equalToConstant: numberTextFieldWidth).isActive = true
-//
-//        return t
-//    }
-    
     static func createButton(with title: String, color: UIColor = .card) -> UIButton {
         let button = UIButton()
         button.backgroundColor = color
-        button.setTitleColor(color != .secondaryBackgroundColor ? .hexToColor(hexString: "#FCFCFC") : .mainText, for: .normal)
+//        button.setTitleColor(color != .secondaryBackgroundColor ? .hexToColor(hexString: "#FCFCFC") : .mainText, for: .normal)
         button.setTitle(title, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 20)
         button.layer.cornerRadius = 30
@@ -95,6 +56,48 @@ class UIElementsManager {
         button.heightAnchor.constraint(equalToConstant: buttonHeight).isActive = true
         
         return button
+    }
+    
+    static func createFavoriteButton() -> UIButton {
+        let button = UIButton()
+        button.addShadowWith(radius: 3, offset: CGSize(width: 0, height: 3), opacity: 0.16)
+        button.backgroundColor = .card
+        button.layer.cornerRadius = circleViewHeightAndWidth / 2
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: circleViewHeightAndWidth).isActive = true
+        button.widthAnchor.constraint(equalToConstant: circleViewHeightAndWidth).isActive = true
+        
+        return button
+    }
+    
+    static func createView(isUserInteractionEnabled: Bool = false) -> UIView {
+        let view = UIView()
+        view.isUserInteractionEnabled = isUserInteractionEnabled
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }
+    
+    static func createView(with string: String) -> UIView {
+        let view = UIView()
+        let label = UIElementsManager.createLabel(with: string, fontSize: 24)
+        
+        view.backgroundColor = .card
+        view.addSubview(label)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            view.heightAnchor.constraint(equalToConstant: UIElementsManager.cardHeight),
+            view.widthAnchor.constraint(equalToConstant: UIElementsManager.cardWidth),
+            
+            label.topAnchor.constraint(equalTo: view.topAnchor),
+            label.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            label.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        return view
     }
     
     static func createImageView(with image: UIImage) -> UIImageView {
@@ -106,37 +109,35 @@ class UIElementsManager {
         return imageView
     }
     
-//    static func createSettingsButton() -> UIButton {
-//        let button = UIButton()
-//        button.setBackgroundImage(UIImage.settings, for: .normal)
-//        button.addShadowWith(radius: 4, offset: CGSize(width: 0, height: 4), opacity: 0.16)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.heightAnchor.constraint(equalToConstant: settingsButtonHeightAndWidth).isActive = true
-//        button.widthAnchor.constraint(equalToConstant: settingsButtonHeightAndWidth).isActive = true
-//        
-//        return button
-//    }
-    
-    static func createView(isUserInteractionEnabled: Bool = false) -> UIView {
-        let view = UIView()
-        view.isUserInteractionEnabled = isUserInteractionEnabled
-        view.translatesAutoresizingMaskIntoConstraints = false
+    static func createCardImageView(with image: UIImage) -> UIImageView {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
         
-        return view
+        return imageView
     }
     
-    
-    static func createStackView(layoutMargins: UIEdgeInsets = UIEdgeInsets(), axis: NSLayoutConstraint.Axis = .vertical, spacing: CGFloat = 0) -> UIStackView {
-        let stackView = UIStackView()
-        stackView.axis = axis
-        stackView.alignment = .leading
-        stackView.spacing = spacing
-        stackView.distribution = .fillEqually
-        stackView.layoutMargins = layoutMargins
-        stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+    static func createSettingsButton() -> UIButton {
+        let button = UIButton()
+//        button.setBackgroundImage(UIImage.settings, for: .normal)
+        button.addShadowWith(radius: 4, offset: CGSize(width: 0, height: 4), opacity: 0.16)
+        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.heightAnchor.constraint(equalToConstant: settingsButtonHeightAndWidth).isActive = true
+//        button.widthAnchor.constraint(equalToConstant: settingsButtonHeightAndWidth).isActive = true
+        
+        return button
+    }
 
-        return stackView
+    
+    static func createOverlayView() -> OverlayView {
+        let overlayView = OverlayView()
+        overlayView.backgroundColor = .card
+        overlayView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return overlayView
     }
     
     
@@ -145,17 +146,33 @@ class UIElementsManager {
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         layout.scrollDirection = .vertical
         
-//        let width = navigationTabBarItemWidth
-//        let height = UIScreen.main.bounds.height / 10
-//        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 4, height: navigationTabBarItemHeight)
-//        layout.minimumInteritemSpacing =
-//        layout.minimumLineSpacing = 14
-        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .background
         collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
+    }
+    
+    static func createKolodaView() -> KolodaView {
+        let kolodaView = KolodaView()
+        kolodaView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return kolodaView
+    }
+    
+    static func createKolodaCard(with text: String) -> Card {
+        let card = Card()
+         let label = UIElementsManager.createLabel(with: text, fontSize: 24)
+         card.addSubview(label)
+        
+         NSLayoutConstraint.activate([
+             label.topAnchor.constraint(equalTo: card.topAnchor),
+             label.bottomAnchor.constraint(equalTo: card.bottomAnchor),
+             label.leadingAnchor.constraint(equalTo: card.leadingAnchor),
+             label.trailingAnchor.constraint(equalTo: card.trailingAnchor),
+         ])
+        
+        return card
     }
 }

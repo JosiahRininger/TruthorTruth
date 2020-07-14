@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeView: UIView {
+final class HomeView: UIView {
     
     var cardCollectionView = UIElementsManager.createCardCollectionView()
 
@@ -38,6 +38,6 @@ class HomeView: UIView {
             cardCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
             cardCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             cardCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
-            ])
+        ])
     }
 }
