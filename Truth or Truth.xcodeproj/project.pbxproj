@@ -3,18 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8A5CBAD4249FA1C300D4807C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBAD3249FA1C300D4807C /* AppDelegate.swift */; };
-		8A5CBAD6249FA1C300D4807C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBAD5249FA1C300D4807C /* SceneDelegate.swift */; };
-		8A5CBAD8249FA1C300D4807C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBAD7249FA1C300D4807C /* ViewController.swift */; };
-		8A5CBADB249FA1C300D4807C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5CBAD9249FA1C300D4807C /* Main.storyboard */; };
+		8A5CBAD8249FA1C300D4807C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBAD7249FA1C300D4807C /* HomeController.swift */; };
 		8A5CBADD249FA1C300D4807C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5CBADC249FA1C300D4807C /* Assets.xcassets */; };
 		8A5CBAE0249FA1C300D4807C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5CBADE249FA1C300D4807C /* LaunchScreen.storyboard */; };
-		8A5CBAEB249FA1C300D4807C /* Truth_or_TruthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBAEA249FA1C300D4807C /* Truth_or_TruthTests.swift */; };
-		8A5CBAF6249FA1C300D4807C /* Truth_or_TruthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBAF5249FA1C300D4807C /* Truth_or_TruthUITests.swift */; };
+		8A5CBB08249FB2E800D4807C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBB07249FB2E800D4807C /* UIColor.swift */; };
+		8A5CBB0A249FBAF200D4807C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBB09249FBAF200D4807C /* UIView.swift */; };
+		8A5CBB0C249FBB1300D4807C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5CBB0B249FBB1300D4807C /* UIImage.swift */; };
+		8A6085B324BA497D000E48BE /* CategoryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085B224BA497D000E48BE /* CategoryDetailController.swift */; };
+		8A6085B524BA49C3000E48BE /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085B424BA49C3000E48BE /* CategoryDetailView.swift */; };
+		8A6085B924BBC144000E48BE /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085B824BBC144000E48BE /* FirestoreService.swift */; };
+		8A6085BF24BBC832000E48BE /* TOTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085BE24BBC831000E48BE /* TOTViewController.swift */; };
+		8A6085C124BBCF8C000E48BE /* SystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085C024BBCF8C000E48BE /* SystemLogger.swift */; };
+		8A6085C324BBD35A000E48BE /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085C224BBD35A000E48BE /* QuestionModel.swift */; };
+		8A6085C524BBD4D9000E48BE /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085C424BBD4D9000E48BE /* CategoryViewModel.swift */; };
+		8A6085C824BBDEFA000E48BE /* QuestionsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6085C624BBD5C7000E48BE /* QuestionsType.swift */; };
+		8A80E0EB24D4B7CE0041B902 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80E0EA24D4B7CE0041B902 /* NetworkErrorView.swift */; };
+		8A80E0ED24D4B7E80041B902 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80E0EC24D4B7E80041B902 /* PopUp.swift */; };
+		8A80E0EF24D4BB590041B902 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A80E0EE24D4BB590041B902 /* Localizable.strings */; };
+		8A80E0F324D4BD680041B902 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80E0F224D4BD680041B902 /* ErrorManager.swift */; };
+		8A80E0F524D58C020041B902 /* TOTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80E0F424D58C020041B902 /* TOTError.swift */; };
+		8A80E0F824D58E330041B902 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A80E0F724D58E330041B902 /* Reachability.swift */; };
+		8A80E0FA24D597DC0041B902 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A80E0F924D597DC0041B902 /* GoogleService-Info.plist */; };
+		8AC1CD9124BCC0D20052E01D /* TOTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1CD9024BCC0D20052E01D /* TOTNavigationController.swift */; };
+		8AC1CD9324BF832B0052E01D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1CD9224BF832B0052E01D /* UIButton.swift */; };
+		8AC1CD9524BF861A0052E01D /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1CD9424BF861A0052E01D /* UILabel.swift */; };
+		8AC1CD9724BF86640052E01D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1CD9624BF86640052E01D /* UIImageView.swift */; };
+		8AC1CD9924BF87E30052E01D /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1CD9824BF87E30052E01D /* UIStackView.swift */; };
+		8AC1CD9B24BF88200052E01D /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1CD9A24BF88200052E01D /* UICollectionView.swift */; };
+		8AC791F524A6A2C3004F882E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC791F424A6A2C3004F882E /* HomeView.swift */; };
+		8AC791FA24A6A3DF004F882E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC791F924A6A3DF004F882E /* Card.swift */; };
+		8AC791FC24A6A736004F882E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC791FB24A6A736004F882E /* CategoryCell.swift */; };
+		8AC791FF24A6AB07004F882E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC791FE24A6AB07004F882E /* String.swift */; };
+		B3F1B8C43653F126E63C517B /* Pods_Truth_or_Truth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DE02590DF7E347ED040578 /* Pods_Truth_or_Truth.framework */; };
+		C9B5AA8AB16F647F43A02BB8 /* Pods_Truth_or_Truth_Truth_or_TruthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFB750824AC588F68B98AE2 /* Pods_Truth_or_Truth_Truth_or_TruthUITests.framework */; };
+		D6832DA53324A57CB8E84E44 /* Pods_Truth_or_TruthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C698881D027AF30B076DFB5 /* Pods_Truth_or_TruthTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +62,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A174D120EB9956401F1317 /* Pods-Truth or Truth-Truth or TruthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truth or Truth-Truth or TruthUITests.release.xcconfig"; path = "Target Support Files/Pods-Truth or Truth-Truth or TruthUITests/Pods-Truth or Truth-Truth or TruthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		03DE02590DF7E347ED040578 /* Pods_Truth_or_Truth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Truth_or_Truth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A448DAB6470A22BA950A1B /* Pods-Truth or Truth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truth or Truth.release.xcconfig"; path = "Target Support Files/Pods-Truth or Truth/Pods-Truth or Truth.release.xcconfig"; sourceTree = "<group>"; };
+		4C698881D027AF30B076DFB5 /* Pods_Truth_or_TruthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Truth_or_TruthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D63C175C5CCB3B02D34228 /* Pods-Truth or TruthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truth or TruthTests.release.xcconfig"; path = "Target Support Files/Pods-Truth or TruthTests/Pods-Truth or TruthTests.release.xcconfig"; sourceTree = "<group>"; };
+		7DD9C62590CE1BBD4BE2342B /* Pods-Truth or Truth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truth or Truth.debug.xcconfig"; path = "Target Support Files/Pods-Truth or Truth/Pods-Truth or Truth.debug.xcconfig"; sourceTree = "<group>"; };
 		8A5CBAD0249FA1C300D4807C /* Truth or Truth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Truth or Truth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5CBAD3249FA1C300D4807C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A5CBAD5249FA1C300D4807C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A5CBAD7249FA1C300D4807C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8A5CBADA249FA1C300D4807C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A5CBAD7249FA1C300D4807C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8A5CBADC249FA1C300D4807C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A5CBADF249FA1C300D4807C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A5CBAE1249FA1C300D4807C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A5CBAE6249FA1C300D4807C /* Truth or TruthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Truth or TruthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A5CBAEA249FA1C300D4807C /* Truth_or_TruthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Truth_or_TruthTests.swift; sourceTree = "<group>"; };
 		8A5CBAEC249FA1C300D4807C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A5CBAF1249FA1C300D4807C /* Truth or TruthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Truth or TruthUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A5CBAF5249FA1C300D4807C /* Truth_or_TruthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Truth_or_TruthUITests.swift; sourceTree = "<group>"; };
 		8A5CBAF7249FA1C300D4807C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A5CBB07249FB2E800D4807C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8A5CBB09249FBAF200D4807C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8A5CBB0B249FBB1300D4807C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		8A6085B224BA497D000E48BE /* CategoryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailController.swift; sourceTree = "<group>"; };
+		8A6085B424BA49C3000E48BE /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
+		8A6085B824BBC144000E48BE /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		8A6085BE24BBC831000E48BE /* TOTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTViewController.swift; sourceTree = "<group>"; };
+		8A6085C024BBCF8C000E48BE /* SystemLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemLogger.swift; sourceTree = "<group>"; };
+		8A6085C224BBD35A000E48BE /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		8A6085C424BBD4D9000E48BE /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		8A6085C624BBD5C7000E48BE /* QuestionsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsType.swift; sourceTree = "<group>"; };
+		8A80E0EA24D4B7CE0041B902 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
+		8A80E0EC24D4B7E80041B902 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		8A80E0EE24D4BB590041B902 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8A80E0F224D4BD680041B902 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		8A80E0F424D58C020041B902 /* TOTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTError.swift; sourceTree = "<group>"; };
+		8A80E0F724D58E330041B902 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8A80E0F924D597DC0041B902 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8AC1CD9024BCC0D20052E01D /* TOTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTNavigationController.swift; sourceTree = "<group>"; };
+		8AC1CD9224BF832B0052E01D /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		8AC1CD9424BF861A0052E01D /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		8AC1CD9624BF86640052E01D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		8AC1CD9824BF87E30052E01D /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		8AC1CD9A24BF88200052E01D /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		8AC791F424A6A2C3004F882E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8AC791F924A6A3DF004F882E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8AC791FB24A6A736004F882E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		8AC791FE24A6AB07004F882E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A85B048FBC234C2A7D1F5178 /* Pods-Truth or Truth-Truth or TruthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truth or Truth-Truth or TruthUITests.debug.xcconfig"; path = "Target Support Files/Pods-Truth or Truth-Truth or TruthUITests/Pods-Truth or Truth-Truth or TruthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C973DA80C2F7020E00535155 /* Pods-Truth or TruthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truth or TruthTests.debug.xcconfig"; path = "Target Support Files/Pods-Truth or TruthTests/Pods-Truth or TruthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ECFB750824AC588F68B98AE2 /* Pods_Truth_or_Truth_Truth_or_TruthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Truth_or_Truth_Truth_or_TruthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F1B8C43653F126E63C517B /* Pods_Truth_or_Truth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6832DA53324A57CB8E84E44 /* Pods_Truth_or_TruthTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +132,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B5AA8AB16F647F43A02BB8 /* Pods_Truth_or_Truth_Truth_or_TruthUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2918E3C0833357DFA75A9863 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DD9C62590CE1BBD4BE2342B /* Pods-Truth or Truth.debug.xcconfig */,
+				34A448DAB6470A22BA950A1B /* Pods-Truth or Truth.release.xcconfig */,
+				A85B048FBC234C2A7D1F5178 /* Pods-Truth or Truth-Truth or TruthUITests.debug.xcconfig */,
+				02A174D120EB9956401F1317 /* Pods-Truth or Truth-Truth or TruthUITests.release.xcconfig */,
+				C973DA80C2F7020E00535155 /* Pods-Truth or TruthTests.debug.xcconfig */,
+				56D63C175C5CCB3B02D34228 /* Pods-Truth or TruthTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8A5CBAC7249FA1C300D4807C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +159,8 @@
 				8A5CBAE9249FA1C300D4807C /* Truth or TruthTests */,
 				8A5CBAF4249FA1C300D4807C /* Truth or TruthUITests */,
 				8A5CBAD1249FA1C300D4807C /* Products */,
+				2918E3C0833357DFA75A9863 /* Pods */,
+				EE5FB001647834EAD0FC9746 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +178,15 @@
 			isa = PBXGroup;
 			children = (
 				8A5CBAD3249FA1C300D4807C /* AppDelegate.swift */,
-				8A5CBAD5249FA1C300D4807C /* SceneDelegate.swift */,
-				8A5CBAD7249FA1C300D4807C /* ViewController.swift */,
-				8A5CBAD9249FA1C300D4807C /* Main.storyboard */,
+				8A5CBB06249FB2D800D4807C /* Extensions */,
+				8AC791F624A6A377004F882E /* Classes */,
+				8A80E0F624D58CC20041B902 /* Managers */,
+				8A5CBB0E249FC15F00D4807C /* Screens */,
 				8A5CBADC249FA1C300D4807C /* Assets.xcassets */,
 				8A5CBADE249FA1C300D4807C /* LaunchScreen.storyboard */,
 				8A5CBAE1249FA1C300D4807C /* Info.plist */,
+				8A80E0F924D597DC0041B902 /* GoogleService-Info.plist */,
+				8A80E0EE24D4BB590041B902 /* Localizable.strings */,
 			);
 			path = "Truth or Truth";
 			sourceTree = "<group>";
@@ -113,7 +194,6 @@
 		8A5CBAE9249FA1C300D4807C /* Truth or TruthTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A5CBAEA249FA1C300D4807C /* Truth_or_TruthTests.swift */,
 				8A5CBAEC249FA1C300D4807C /* Info.plist */,
 			);
 			path = "Truth or TruthTests";
@@ -122,10 +202,90 @@
 		8A5CBAF4249FA1C300D4807C /* Truth or TruthUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8A5CBAF5249FA1C300D4807C /* Truth_or_TruthUITests.swift */,
 				8A5CBAF7249FA1C300D4807C /* Info.plist */,
 			);
 			path = "Truth or TruthUITests";
+			sourceTree = "<group>";
+		};
+		8A5CBB06249FB2D800D4807C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A80E0F724D58E330041B902 /* Reachability.swift */,
+				8A5CBB07249FB2E800D4807C /* UIColor.swift */,
+				8A5CBB09249FBAF200D4807C /* UIView.swift */,
+				8A5CBB0B249FBB1300D4807C /* UIImage.swift */,
+				8AC791FE24A6AB07004F882E /* String.swift */,
+				8AC1CD9224BF832B0052E01D /* UIButton.swift */,
+				8AC1CD9424BF861A0052E01D /* UILabel.swift */,
+				8AC1CD9624BF86640052E01D /* UIImageView.swift */,
+				8AC1CD9824BF87E30052E01D /* UIStackView.swift */,
+				8AC1CD9A24BF88200052E01D /* UICollectionView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A5CBB0D249FC14900D4807C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8A5CBAD7249FA1C300D4807C /* HomeController.swift */,
+				8AC791F424A6A2C3004F882E /* HomeView.swift */,
+				8AC791FB24A6A736004F882E /* CategoryCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8A5CBB0E249FC15F00D4807C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8A5CBB0D249FC14900D4807C /* Home */,
+				8A6085B124BA492E000E48BE /* Cards Detail */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8A6085B124BA492E000E48BE /* Cards Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8A6085B224BA497D000E48BE /* CategoryDetailController.swift */,
+				8A6085B424BA49C3000E48BE /* CategoryDetailView.swift */,
+				8A6085C424BBD4D9000E48BE /* CategoryViewModel.swift */,
+			);
+			path = "Cards Detail";
+			sourceTree = "<group>";
+		};
+		8A80E0F624D58CC20041B902 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8A6085B824BBC144000E48BE /* FirestoreService.swift */,
+				8A80E0F224D4BD680041B902 /* ErrorManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8AC791F624A6A377004F882E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8A6085C024BBCF8C000E48BE /* SystemLogger.swift */,
+				8AC1CD9024BCC0D20052E01D /* TOTNavigationController.swift */,
+				8A6085BE24BBC831000E48BE /* TOTViewController.swift */,
+				8AC791F924A6A3DF004F882E /* Card.swift */,
+				8A6085C224BBD35A000E48BE /* QuestionModel.swift */,
+				8A6085C624BBD5C7000E48BE /* QuestionsType.swift */,
+				8A80E0EA24D4B7CE0041B902 /* NetworkErrorView.swift */,
+				8A80E0EC24D4B7E80041B902 /* PopUp.swift */,
+				8A80E0F424D58C020041B902 /* TOTError.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EE5FB001647834EAD0FC9746 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03DE02590DF7E347ED040578 /* Pods_Truth_or_Truth.framework */,
+				ECFB750824AC588F68B98AE2 /* Pods_Truth_or_Truth_Truth_or_TruthUITests.framework */,
+				4C698881D027AF30B076DFB5 /* Pods_Truth_or_TruthTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A5CBAFA249FA1C300D4807C /* Build configuration list for PBXNativeTarget "Truth or Truth" */;
 			buildPhases = (
+				2F89143F50B1E9B208990576 /* [CP] Check Pods Manifest.lock */,
 				8A5CBACC249FA1C300D4807C /* Sources */,
 				8A5CBACD249FA1C300D4807C /* Frameworks */,
 				8A5CBACE249FA1C300D4807C /* Resources */,
+				8E83B6B909BEFE3134BB4AF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A5CBAFD249FA1C300D4807C /* Build configuration list for PBXNativeTarget "Truth or TruthTests" */;
 			buildPhases = (
+				84EB54BE9BBC1FF9EAAE4193 /* [CP] Check Pods Manifest.lock */,
 				8A5CBAE2249FA1C300D4807C /* Sources */,
 				8A5CBAE3249FA1C300D4807C /* Frameworks */,
 				8A5CBAE4249FA1C300D4807C /* Resources */,
@@ -170,9 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A5CBB00249FA1C300D4807C /* Build configuration list for PBXNativeTarget "Truth or TruthUITests" */;
 			buildPhases = (
+				7E327BD8E03E4439D596C158 /* [CP] Check Pods Manifest.lock */,
 				8A5CBAED249FA1C300D4807C /* Sources */,
 				8A5CBAEE249FA1C300D4807C /* Frameworks */,
 				8A5CBAEF249FA1C300D4807C /* Resources */,
+				EC27820A07F48DBBF8582096 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,8 +398,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5CBAE0249FA1C300D4807C /* LaunchScreen.storyboard in Resources */,
+				8A80E0FA24D597DC0041B902 /* GoogleService-Info.plist in Resources */,
+				8A80E0EF24D4BB590041B902 /* Localizable.strings in Resources */,
 				8A5CBADD249FA1C300D4807C /* Assets.xcassets in Resources */,
-				8A5CBADB249FA1C300D4807C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +420,142 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F89143F50B1E9B208990576 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Truth or Truth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E327BD8E03E4439D596C158 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Truth or Truth-Truth or TruthUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84EB54BE9BBC1FF9EAAE4193 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Truth or TruthTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E83B6B909BEFE3134BB4AF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truth or Truth/Pods-Truth or Truth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truth or Truth/Pods-Truth or Truth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Truth or Truth/Pods-Truth or Truth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC27820A07F48DBBF8582096 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truth or Truth-Truth or TruthUITests/Pods-Truth or Truth-Truth or TruthUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truth or Truth-Truth or TruthUITests/Pods-Truth or Truth-Truth or TruthUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Truth or Truth-Truth or TruthUITests/Pods-Truth or Truth-Truth or TruthUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A5CBACC249FA1C300D4807C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A5CBAD8249FA1C300D4807C /* ViewController.swift in Sources */,
+				8A6085C824BBDEFA000E48BE /* QuestionsType.swift in Sources */,
+				8A5CBB0A249FBAF200D4807C /* UIView.swift in Sources */,
+				8A80E0F324D4BD680041B902 /* ErrorManager.swift in Sources */,
+				8A6085C124BBCF8C000E48BE /* SystemLogger.swift in Sources */,
+				8AC791FA24A6A3DF004F882E /* Card.swift in Sources */,
+				8AC791FF24A6AB07004F882E /* String.swift in Sources */,
+				8AC1CD9124BCC0D20052E01D /* TOTNavigationController.swift in Sources */,
+				8AC1CD9B24BF88200052E01D /* UICollectionView.swift in Sources */,
+				8A80E0F524D58C020041B902 /* TOTError.swift in Sources */,
+				8AC1CD9724BF86640052E01D /* UIImageView.swift in Sources */,
+				8A6085B924BBC144000E48BE /* FirestoreService.swift in Sources */,
+				8AC791F524A6A2C3004F882E /* HomeView.swift in Sources */,
+				8A6085C324BBD35A000E48BE /* QuestionModel.swift in Sources */,
+				8A6085BF24BBC832000E48BE /* TOTViewController.swift in Sources */,
+				8A80E0F824D58E330041B902 /* Reachability.swift in Sources */,
+				8A6085C524BBD4D9000E48BE /* CategoryViewModel.swift in Sources */,
+				8A5CBB08249FB2E800D4807C /* UIColor.swift in Sources */,
+				8A5CBB0C249FBB1300D4807C /* UIImage.swift in Sources */,
+				8A5CBAD8249FA1C300D4807C /* HomeController.swift in Sources */,
+				8A80E0ED24D4B7E80041B902 /* PopUp.swift in Sources */,
+				8A80E0EB24D4B7CE0041B902 /* NetworkErrorView.swift in Sources */,
+				8AC1CD9324BF832B0052E01D /* UIButton.swift in Sources */,
+				8AC1CD9524BF861A0052E01D /* UILabel.swift in Sources */,
 				8A5CBAD4249FA1C300D4807C /* AppDelegate.swift in Sources */,
-				8A5CBAD6249FA1C300D4807C /* SceneDelegate.swift in Sources */,
+				8AC1CD9924BF87E30052E01D /* UIStackView.swift in Sources */,
+				8AC791FC24A6A736004F882E /* CategoryCell.swift in Sources */,
+				8A6085B324BA497D000E48BE /* CategoryDetailController.swift in Sources */,
+				8A6085B524BA49C3000E48BE /* CategoryDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +563,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A5CBAEB249FA1C300D4807C /* Truth_or_TruthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +570,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A5CBAF6249FA1C300D4807C /* Truth_or_TruthUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +589,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8A5CBAD9249FA1C300D4807C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A5CBADA249FA1C300D4807C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8A5CBADE249FA1C300D4807C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,16 +716,18 @@
 		};
 		8A5CBAFB249FA1C300D4807C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD9C62590CE1BBD4BE2342B /* Pods-Truth or Truth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BPW45ZHW4H;
 				INFOPLIST_FILE = "Truth or Truth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jdr.truthortruth.Truth-or-Truth";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jdr.truthortruth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,16 +736,18 @@
 		};
 		8A5CBAFC249FA1C300D4807C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34A448DAB6470A22BA950A1B /* Pods-Truth or Truth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BPW45ZHW4H;
 				INFOPLIST_FILE = "Truth or Truth/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jdr.truthortruth.Truth-or-Truth";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jdr.truthortruth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,6 +756,7 @@
 		};
 		8A5CBAFE249FA1C300D4807C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C973DA80C2F7020E00535155 /* Pods-Truth or TruthTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +779,7 @@
 		};
 		8A5CBAFF249FA1C300D4807C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D63C175C5CCB3B02D34228 /* Pods-Truth or TruthTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +802,7 @@
 		};
 		8A5CBB01249FA1C300D4807C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A85B048FBC234C2A7D1F5178 /* Pods-Truth or Truth-Truth or TruthUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +823,7 @@
 		};
 		8A5CBB02249FA1C300D4807C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A174D120EB9956401F1317 /* Pods-Truth or Truth-Truth or TruthUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
