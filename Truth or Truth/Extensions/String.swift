@@ -9,20 +9,21 @@
 import Foundation
 
 extension String {
+    // MARK: - UI Elements
     struct Literals {
         static let categories = [
-            "Couples",
-            "Friends",
-            "Groups",
-            "Strangers",
-            "Favorites"
+            "Couples".localize(),
+            "Friends".localize(),
+            "Groups".localize(),
+            "Strangers".localize(),
+            "Favorites".localize()
         ]
         static let categoryDescriptions = [
-            "Play with your significan other",
-            "Play with personal questions for 2 people who are friends.",
-            "Play with questions ment for groups of 3 or more people",
-            "Play with questions for 2 people who don't really know each other",
-            "Play with your favorite questions"
+            "Play with your\nsignificant other".localize(),
+            "Play with personal\nquestions for 2 people\nwho are friends.".localize(),
+            "Play with questions\nmeant for groups\nof 3 or more people".localize(),
+            "Play with questions\nfor two people who don't\nreally know each other".localize(),
+            "Play with your\nfavorite questions".localize()
         ]
     }
 
@@ -35,7 +36,15 @@ extension String {
         static let friends = "Friends"
         static let groups = "Groups"
         static let strangers = "Strangers"
-        
         static let text = "text"
     }
+    
+    // MARK: - Helper Method
+    func localize(comment: String = "") -> String {
+        return NSLocalizedString(self, comment: comment)
+    }
+    
+    func styled( with attrs: [NSAttributedString.Key: Any] ) -> NSAttributedString {
+         return NSAttributedString(string: self, attributes: attrs)
+     }
 }

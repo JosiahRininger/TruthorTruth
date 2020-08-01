@@ -10,8 +10,6 @@ import UIKit
 import os.log
 
 final class SystemLogger {
-    //  private init()
-    
     static let shared = SystemLogger()
     
     var logger: OSLog = {

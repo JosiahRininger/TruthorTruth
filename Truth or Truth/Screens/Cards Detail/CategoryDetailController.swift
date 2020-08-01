@@ -33,9 +33,7 @@ final class CategoryDetailController: TOTViewController {
         categoryViewModel = CategoryViewModel(delegate: self)
         
         fetchQuestions(for: questionsType)
-        
         setup(with: categoryDetailView)
-        
         setupNavigationItem()
     }
     
@@ -60,9 +58,19 @@ final class CategoryDetailController: TOTViewController {
 // MARK: - CategoryViewModel Methods
 extension CategoryDetailController: CategoryViewModelDelegate {
     func questionsRetrieved(_ questionModels: [QuestionModel]) {
-        self.questionModels = questionModels
+         self.questionModels = questionModels
         
+#if DEBUG
+        self.questionModels = questionModels + questionModels + questionModels
+#endif
         categoryDetailView.kolodaView.reloadData()
+    }
+    
+    func showErrorFlash(_ error: TOTError) {
+        switch error {
+        case TOTError.network: ErrorManager.showPopUp(for: view)
+        default: ErrorManager.showFlash(with: error.message)
+        }
     }
 }
 
@@ -85,7 +93,7 @@ extension CategoryDetailController: KolodaViewDelegate, KolodaViewDataSource {
     }
 
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIElementsManager.createKolodaCard(with: questionModels[index].text)
+        return Card.koloda(with: questionModels[index].text)
     }
 }
 

@@ -11,11 +11,14 @@ import Koloda
 
 final class CategoryDetailView: UIView {
     
-    let kolodaOffsetConstant = -(UIElementsManager.windowHeight - UIElementsManager.cardHeight) / 6
-    let favoriteOffsetConstant = (UIElementsManager.windowHeight - UIElementsManager.cardHeight) / 4
+    let kolodaOffsetConstant = -(UIScreen.main.bounds.height - Card.heightConstant) / 6
+    let favoriteOffsetConstant = (UIScreen.main.bounds.height - Card.heightConstant) / 4
     
-    let kolodaView = UIElementsManager.createKolodaView()
-    let favoriteButton = UIElementsManager.createFavoriteButton()
+    let kolodaView = KolodaView()
+    let stackView = UIStackView.create(axis: .horizontal)
+    let leftArrowButton = UIButton.arrow(with: UIImage.leftArrow ?? UIImage())
+    let favoriteButton = UIButton.favorite()
+    let rightArrowButton = UIButton.arrow(with: .rightArrow ?? UIImage())
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,23 +30,29 @@ final class CategoryDetailView: UIView {
     }
     
     private func setupView() {
-        frame = CGRect(x: 0, y: 0, width: UIElementsManager.windowWidth, height: UIElementsManager.windowHeight)
+        frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         backgroundColor = .background
 
-        addSubviews(favoriteButton, kolodaView)
+        kolodaView.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubviews(stackView, kolodaView)
+        stackView.addArrangedSubview(leftArrowButton)
+        stackView.addArrangedSubview(favoriteButton)
+        stackView.addArrangedSubview(rightArrowButton)
         setupConstraints()
     }
     
     private func setupConstraints() {
-        
         NSLayoutConstraint.activate([
             kolodaView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: kolodaOffsetConstant),
             kolodaView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            kolodaView.heightAnchor.constraint(equalToConstant: UIElementsManager.cardHeight),
-            kolodaView.widthAnchor.constraint(equalToConstant: UIElementsManager.cardWidth),
+            kolodaView.heightAnchor.constraint(equalToConstant: Card.heightConstant),
+            kolodaView.widthAnchor.constraint(equalToConstant: Card.widthConstant),
             
-            favoriteButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            favoriteButton.centerYAnchor.constraint(equalTo: kolodaView.bottomAnchor, constant: favoriteOffsetConstant)
+            stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: kolodaView.bottomAnchor, constant: favoriteOffsetConstant),
+            stackView.heightAnchor.constraint(equalTo: favoriteButton.heightAnchor),
+            stackView.widthAnchor.constraint(equalTo: kolodaView.widthAnchor)
         ])
     }
 }

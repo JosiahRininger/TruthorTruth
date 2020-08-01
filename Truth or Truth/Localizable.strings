@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Truth or Truth
+
+  Created by Josiah Rininger on 7/31/20.
+  Copyright © 2020 Josiah Rininger. All rights reserved.
+*/
+
+// MARK: - Global
+"AppName" = "Truth or Truth";
+"Okay" = "Okay";
+"Error title" = "Something went wrong";
+"Error message" = "Please check your internet connection and try again";
+
+// MARK: - Home
+
+// Categories
+"Couples" = "Couples";
+"Friends" = "Friends";
+"Groups" = "Groups";
+"Strangers" = "Strangers";
+"Favorites" = "Favorites";
+
+// Category Descriptions
+"Play with your\nsignificant other" = "Play with your\nsignificant other";
+"Play with personal\nquestions for 2 people\nwho are friends." = "Play with personal\nquestions for 2 people\nwho are friends.";
+"Play with questions\nmeant for groups\nof 3 or more people" = "Play with questions\nmeant for groups\nof 3 or more people";
+"Play with questions\nfor two people who don't\nreally know each other" = "Play with questions\nfor two people who don't\nreally know each other";
+"Play with your\nfavorite questions" = "Play with your\nfavorite questions";

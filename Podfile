@@ -7,6 +7,9 @@ target 'Truth or Truth' do
 
   pod "Koloda"
   pod 'Firebase/Firestore'
+  pod 'PKHUD', '5.3.0'
+  pod 'ReachabilitySwift'
+  pod 'SwiftLint', '0.35.0', :configurations => ['Debug']
 
   target 'Truth or TruthTests' do
     inherit! :search_paths

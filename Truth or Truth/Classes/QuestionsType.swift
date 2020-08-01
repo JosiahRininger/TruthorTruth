@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum QuestionsType: String {
+enum QuestionsType: String, CaseIterable {
     case Couples
     case Friends
     case Groups

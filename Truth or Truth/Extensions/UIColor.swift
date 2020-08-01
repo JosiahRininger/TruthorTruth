@@ -41,6 +41,10 @@ extension UIColor {
         return UIColor(named: "card") ?? .hexToColor(hexString: "#F4F4F4")
     }()
     
+    static var cardHighlighted: UIColor = {
+        return UIColor(named: "cardHighlighted") ?? .hexToColor(hexString: "#F4F4F4")
+    }()
+    
     static var imageTint: UIColor = {
         return UIColor(named: "imageTint") ?? .hexToColor(hexString: "#F4F4F4")
     }()

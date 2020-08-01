@@ -10,7 +10,7 @@ import UIKit
 
 final class HomeView: UIView {
     
-    var cardCollectionView = UIElementsManager.createCardCollectionView()
+    var cardCollectionView = UICollectionView.card()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +22,7 @@ final class HomeView: UIView {
     }
     
     private func setupView() {
-        frame = CGRect(x: 0, y: 0, width: UIElementsManager.windowWidth, height: UIElementsManager.windowHeight)
+        frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         backgroundColor = .background
         
         cardCollectionView.register(CategoryCell.self, forCellWithReuseIdentifier: String.IDs.categoryCellId)
@@ -32,7 +32,6 @@ final class HomeView: UIView {
     }
     
     private func setupConstraints() {
-        
         NSLayoutConstraint.activate([
             cardCollectionView.topAnchor.constraint(equalTo: topAnchor),
             cardCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),

@@ -8,26 +8,32 @@
 
 import Foundation
 import FirebaseFirestore
-import os.log
+import Reachability
 
 struct FirestoreService {
-    typealias GetQuestionsHandler = (Result<QuerySnapshot, Error>) -> Void
+    typealias GetQuestionsHandler = (Result<QuerySnapshot, TOTError>) -> Void
     
     static let db = Firestore.firestore()
     
-    // Updates the game data
+    static private let reachability = try! Reachability()
+    
+    static func listenForNetworkChanges() {
+        reachability.listenForNetworkChanges()
+    }
+    
+    // Gets all the questions for a category
     static func getQuestions(with questionsType: QuestionsType, completion: @escaping GetQuestionsHandler) {
-        let colletionName = questionsType.rawValue
-        db.collection(colletionName).getDocuments { querySnapshot, error in
-            if let error = error {
-                os_log("Error getting documents: ",
-                       log: SystemLogger.shared.logger,
-                       type: .error,
-                       error.localizedDescription)
-                completion(.failure(error))
+        switch reachability.isConnectedToNetwork {
+        case .success:
+            let colletionName = questionsType.rawValue
+            db.collection(colletionName).getDocuments { querySnapshot, error in
+                if let error = error {
+                    completion(.failure(TOTError.unknown.log(error.localizedDescription)))
+                }
+                guard let querySnapshot = querySnapshot else { return }
+                completion(.success(querySnapshot))
             }
-            guard let querySnapshot = querySnapshot else { return }
-            completion(.success(querySnapshot))
+        case .failure(let error): completion(.failure(error))
         }
     }
 }

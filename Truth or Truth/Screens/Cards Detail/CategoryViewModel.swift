@@ -8,10 +8,10 @@
 
 import Foundation
 import FirebaseFirestore
-import os.log
 
 protocol CategoryViewModelDelegate: class {
     func questionsRetrieved(_ questionModels: [QuestionModel])
+    func showErrorFlash(_ error: TOTError)
 }
 
 class CategoryViewModel {
@@ -27,11 +27,7 @@ class CategoryViewModel {
             switch result {
             case .success(let querySnapshot):
                 self?.handleQuestions(with: querySnapshot)
-            case .failure(let error):
-                os_log("Error: ",
-                       log: SystemLogger.shared.logger,
-                       type: .error,
-                       error.localizedDescription)
+            case .failure(let error): self?.errorExist(error)
             }
         }
     }
@@ -46,4 +42,8 @@ class CategoryViewModel {
         delegate?.questionsRetrieved(questionModels)
     }
     
+    private func errorExist(_ error: TOTError) {
+        error.log()
+        delegate?.showErrorFlash(error)
+    }
 }

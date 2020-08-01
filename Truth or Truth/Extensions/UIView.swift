@@ -9,6 +9,16 @@
 import UIKit
 
 extension UIView {
+    // MARK: - UI Elements
+    static func create(isUserInteractionEnabled: Bool = false) -> UIView {
+        let view = UIView()
+        view.isUserInteractionEnabled = isUserInteractionEnabled
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }
+    
+    // MARK: - Helper Method
     func addSubviews(_ views: UIView...) {
         for view in views {
             self.addSubview(view)

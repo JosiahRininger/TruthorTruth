@@ -11,11 +11,22 @@ import UIKit
 final class CategoryCell: UICollectionViewCell {
     
     let card = Card()
-    let subCard = Card(isSubCard: true)
+    var imageView = UIImageView.create(with: UIImage())
+    let titleLabel = UILabel.create(fontSize: 30, numberOfLines: 1, textAlignment: .center, isBold: true)
+    let subtitleLabel = UILabel.create(fontSize: 24, numberOfLines: 3, textAlignment: .center)
     
-    var imageView = UIElementsManager.createImageView(with: UIImage())
-    let titleLabel = UIElementsManager.createLabel(with: "Friends", fontSize: 30, textAlignment: .center)
-    let subTitleLabel = UIElementsManager.createLabel(with: "Play these cards if you’re playing with peeps you already know", fontSize: 24, numberOfLines: 3, textAlignment: .center)
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: 0.35) {
+                let transform = self.isHighlighted ? CGAffineTransform(scaleX: 1.08, y: 1.08) : CGAffineTransform.identity
+                self.card.transform = transform
+                self.imageView.transform = transform
+                self.titleLabel.transform = transform
+                self.subtitleLabel.transform = transform
+                self.layoutIfNeeded()
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,8 +42,8 @@ final class CategoryCell: UICollectionViewCell {
         isUserInteractionEnabled = true
         backgroundColor = .background
         layer.cornerRadius = 9
-        
-        addSubviews(subCard, card, imageView, titleLabel, subTitleLabel)
+
+        addSubviews(card, imageView, titleLabel, subtitleLabel)
         setupConstraints()
     }
     
@@ -41,29 +52,26 @@ final class CategoryCell: UICollectionViewCell {
             card.centerXAnchor.constraint(equalTo: centerXAnchor),
             card.centerYAnchor.constraint(equalTo: centerYAnchor),
             
-            subCard.centerXAnchor.constraint(equalTo: card.centerXAnchor),
-            subCard.centerYAnchor.constraint(equalTo: card.bottomAnchor),
-            
             imageView.topAnchor.constraint(equalTo: card.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: card.centerYAnchor),
             imageView.leadingAnchor.constraint(equalTo: card.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: card.trailingAnchor),
             
             titleLabel.centerYAnchor.constraint(equalTo: card.centerYAnchor),
+            titleLabel.centerXAnchor.constraint(equalTo: card.centerXAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 30),
-            titleLabel.leadingAnchor.constraint(equalTo: card.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: card.trailingAnchor),
+            titleLabel.widthAnchor.constraint(equalToConstant: UILabel.widthConstant),
             
-            subTitleLabel.topAnchor.constraint(equalTo: card.centerYAnchor),
-            subTitleLabel.bottomAnchor.constraint(equalTo: card.bottomAnchor),
-            subTitleLabel.leadingAnchor.constraint(equalTo: card.leadingAnchor),
-            subTitleLabel.trailingAnchor.constraint(equalTo: card.trailingAnchor),
-            ])
+            subtitleLabel.centerXAnchor.constraint(equalTo: card.centerXAnchor),
+            subtitleLabel.topAnchor.constraint(equalTo: card.centerYAnchor),
+            subtitleLabel.bottomAnchor.constraint(equalTo: card.bottomAnchor),
+            subtitleLabel.widthAnchor.constraint(equalToConstant: UILabel.widthConstant)
+        ])
     }
     
     func configure(title: String, subTitle: String, image: UIImage) {
         titleLabel.text = title
-        subTitleLabel.text = subTitle
+        subtitleLabel.text = subTitle
         imageView.image = image
     }
     
