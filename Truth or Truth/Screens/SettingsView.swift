@@ -1,16 +1,16 @@
 //
-//  HomeView.swift
+//  SettingsView.swift
 //  Truth or Truth
 //
-//  Created by Josiah Rininger on 6/26/20.
+//  Created by eli dangerfield on 8/3/20.
 //  Copyright © 2020 Josiah Rininger. All rights reserved.
 //
 
 import UIKit
 
-final class HomeView: UIView {
+final class SettingsView: UIView {
     
-    var cardCollectionView = UICollectionView.basic()
+    var settingsCollectionView = UICollectionView.basic()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,18 +25,18 @@ final class HomeView: UIView {
         frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         backgroundColor = .background
         
-        cardCollectionView.register(CategoryCell.self, forCellWithReuseIdentifier: String.IDs.categoryCellId)
+        settingsCollectionView.register(SettingsCell.self, forCellWithReuseIdentifier: String.IDs.settingsCellId)
         
-        addSubviews(cardCollectionView)
+        addSubviews(settingsCollectionView)
         setupConstraints()
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            cardCollectionView.topAnchor.constraint(equalTo: topAnchor),
-            cardCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            cardCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cardCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            settingsCollectionView.topAnchor.constraint(equalTo: topAnchor),
+            settingsCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            settingsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            settingsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }

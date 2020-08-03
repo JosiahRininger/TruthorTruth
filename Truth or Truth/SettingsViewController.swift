@@ -1,14 +1,14 @@
 //
-//  HomeController.swift
+//  SettingsViewController.swift
 //  Truth or Truth
 //
-//  Created by Josiah Rininger on 6/21/20.
+//  Created by eli dangerfield on 8/3/20.
 //  Copyright © 2020 Josiah Rininger. All rights reserved.
 //
 
 import UIKit
 
-final class HomeController: TOTViewController {
+final class SettingsController: TOTViewController {
     
     let homeView = HomeView()
 
@@ -23,18 +23,17 @@ final class HomeController: TOTViewController {
     
     func setupNavigationItem(){
         navigationItem.title = "AppName".localize()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.settings, style: .plain, target: self, action: #selector(self.navigateToSettings))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "gear"), style: .plain, target: self, action: #selector(self.navigateToSettings))
     }
     
     @objc
     func navigateToSettings() {
-        navigationController?.pushViewController(SettingsController(), animated: true)
+        navigationController?.pushViewController(CategoryDetailController(questionsType: .Couples), animated: true)
     }
 }
 
 // MARK: - UICollectionView Methods
-extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SettingsController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return String.Literals.categories.count
     }
@@ -67,6 +66,6 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension HomeController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UICollectionView.cardWidth, height: UICollectionView.cardHeight)
+        return CGSize(width: UICollectionView.cellWidth, height: UICollectionView.cellHeight)
     }
 }

@@ -25,4 +25,6 @@ extension UIImage {
     static let send = UIImage(systemName: "paperplane.fill", withConfiguration: semiBoldConfiguration)
     static let leftArrow = UIImage(systemName: "arrow.left", withConfiguration: semiBoldConfiguration)
     static let rightArrow = UIImage(systemName: "arrow.right", withConfiguration: semiBoldConfiguration)
+    static let about = UIImage(systemName: "info.circle")
+    static let report = UIImage(systemName: "exclamationmark.circle")
 }

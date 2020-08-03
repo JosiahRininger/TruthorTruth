@@ -10,10 +10,13 @@ import UIKit
 
 extension UICollectionView {
     // MARK: - UI Elements
-    static var cellHeight = UIScreen.main.bounds.height * 0.554 + 15
-    static var cellWidth = UIScreen.main.bounds.width * 0.78
+    static var cardHeight = UIScreen.main.bounds.height * 0.554 + 15
+    static var cardWidth = UIScreen.main.bounds.width * 0.78
     
-    static func card() -> UICollectionView {
+    static var settingsItemHeight = UIScreen.main.bounds.height * 0.05
+    static var settingsItemWidth = UIScreen.main.bounds.width * 0.9
+    
+    static func basic() -> UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         layout.scrollDirection = .vertical
