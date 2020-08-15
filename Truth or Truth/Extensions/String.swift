@@ -18,6 +18,7 @@ extension String {
             "Strangers".localize(),
             "Favorites".localize()
         ]
+        
         static let categoryDescriptions = [
             "Play with your\nsignificant other".localize(),
             "Play with personal\nquestions for 2 people\nwho are friends.".localize(),
@@ -26,9 +27,16 @@ extension String {
             "Play with your\nfavorite questions".localize()
         ]
     }
-
+    
+    struct Settings {
+        static let about = "About".localize()
+        static let settings = "Settings".localize()
+        static let report = "Report a bug".localize()
+    }
+    
     struct IDs {
         static let categoryCellId = "categoryCellId"
+        static let settingsCellId = "settingsCellId"
     }
     
     struct DB {

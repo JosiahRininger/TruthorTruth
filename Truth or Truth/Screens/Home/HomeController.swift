@@ -23,6 +23,13 @@ final class HomeController: TOTViewController {
     
     func setupNavigationItem(){
         navigationItem.title = "AppName".localize()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.settings, style: .plain, target: self, action: #selector(self.navigateToSettings))
+    }
+    
+    @objc
+    func navigateToSettings() {
+        navigationController?.pushViewController(SettingsController(), animated: true)
     }
 }
 
@@ -60,6 +67,6 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension HomeController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UICollectionView.cellWidth, height: UICollectionView.cellHeight)
+        return CGSize(width: UICollectionView.cardWidth, height: UICollectionView.cardHeight)
     }
 }
